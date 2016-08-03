@@ -1,0 +1,91 @@
+@import "compass/typography/vertical_rhythm";
+
+$rhythm-unit: "px"; //compass
+$rem-with-px-fallback: false; //compass
+$round-to-nearest-half-line: true; //compass
+$base-font-size: 18px; //compass
+$base-line-height: 20px; //compass
+
+$base-gutter: 24px; // settings/mixins
+
+$max-width: px-to-rem( 1440px );
+$desktop-width: px-to-rem( 1080px );
+$tablet-width: px-to-rem( 840px );
+$mobile-width: px-to-rem( 500px );
+$min-width: px-to-rem( 320px );
+
+$navbar-height: px-to-rem( 60px );
+
+$breakpoints: (
+    "max"       : "( max-width: #{$max-width} )",
+    "desktop"   : "( max-width: #{$desktop-width} )",
+    "tablet"    : "( max-width: #{$tablet-width} )",
+    "mobile"    : "( max-width: #{$mobile-width} )",
+    "min"       : "( max-width: #{$min-width} )",
+    "retina"    : "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)"
+);
+
+$breakpoints-reverse: (
+    "desktop"   : "( min-width: #{$desktop-width} )",
+    "tablet"    : "( min-width: #{$tablet-width} )",
+    "mobile"    : "( min-width: #{$mobile-width} )",
+    "min"       : "( min-width: #{$min-width} )"
+);
+
+$font-path: "../fonts/";
+$image-path: "../images/";
+
+$primary-font: "Helvetica";
+
+$border-radius: 3px;
+
+// Brand colours
+$brand-primary: #1abc9c;
+$brand-secondary: #9b59b6;
+
+// Text colours
+$text-colour: #262626;
+$text-colour-inverted: #ffffff;
+$text-colour-muted: #cccccc;
+$text-colour-link: #3498db;
+
+// Helper colours
+$background-colour: #f7f7f7;
+$border-colour: #cccccc;
+$white: #ffffff;
+$black: #2c3e50;
+$grey: #7f8c8d;
+
+// Message colours
+$site-success: #2ecc71;
+$site-warning: #e67e22;
+$site-error: #c0392b;
+
+// Colours array
+$site-colours: (
+	"brand-primary"  	: $brand-primary,
+	"brand-secondary"  	: $brand-secondary,
+	"white"				: $white,
+	"black"				: $black,
+	"grey"				: $grey,
+	"site-success"		: $site-success,
+	"site-warning"		: $site-warning,
+	"site-error"		: $site-error,
+	"link"				: $text-colour-link
+);
+
+// Darkened colours array
+$site-colours-hover: (
+	"brand-primary"  	: darken( $brand-primary, 10% ),
+	"brand-secondary"  	: darken( $brand-secondary, 10% ),
+	"white"				: darken( $white, 10% ),
+	"black"				: lighten( $black, 10% ),
+	"grey"				: lighten( $grey, 10%),
+	"site-success"		: darken( $site-success, 10% ),
+	"site-warning"		: darken( $site-warning, 10% ),
+	"site-error"		: darken( $site-error, 10% ),
+	"link"				: darken( $text-colour-link, 10% )
+);
+
+// Compass includes
+@include establish-baseline;
