@@ -18,6 +18,10 @@ Install composer
 
 	composer install
 
+Install npm packages
+
+	npm i
+
 Set up homestead and edit your configuration
 
 	php vendor/bin/homestead make

@@ -7,3 +7,4 @@ Homestead.json
 .env
 .vagrant
 .sass-cache
+resources/assets/angular2/typings
